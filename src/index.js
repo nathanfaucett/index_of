@@ -1,4 +1,5 @@
-var isArray = require("is_array");
+var isLength = require("is_length"),
+    isObjectLike = require("is_object_like");
 
 
 function arrayIndexOf(array, value, fromIndex) {
@@ -15,5 +16,5 @@ function arrayIndexOf(array, value, fromIndex) {
 }
 
 module.exports = function indexOf(array, value, fromIndex) {
-    return isArray(array) ? arrayIndexOf(array, value, fromIndex || 0) : -1;
+    return (isObjectLike(array) && isLength(array.length)) ? arrayIndexOf(array, value, fromIndex || 0) : -1;
 };

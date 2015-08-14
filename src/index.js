@@ -1,4 +1,5 @@
-var isLength = require("is_length"),
+var isEqual = require("is_equal"),
+    isLength = require("is_length"),
     isObjectLike = require("is_object_like");
 
 
@@ -14,7 +15,7 @@ function arrayIndexOf(array, value, fromIndex) {
         il = array.length - 1;
 
     while (i++ < il) {
-        if (array[i] === value) {
+        if (isEqual(array[i], value)) {
             return i;
         }
     }

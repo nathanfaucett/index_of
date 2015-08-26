@@ -24,8 +24,6 @@
     "mocha": "^2.1.0"
   },
   "dependencies": {
-    "is_equal": "git://github.com/nathanfaucett/is_equal.git",
-    "is_length": "nathanfaucett/is_length",
-    "is_object_like": "nathanfaucett/is_object_like"
+    "is_equal": "git://github.com/nathanfaucett/is_equal.git"
   }
 }
